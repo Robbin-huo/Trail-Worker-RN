@@ -3,6 +3,8 @@ import {
   Button,
   StyleSheet,
   TextInput,
+  Text,
+  TouchableHighlight,
   View,
   PermissionsAndroid,
 } from 'react-native';
@@ -31,7 +33,12 @@ export default class Login extends Component {
           style={styles.input}
           onChangeText={(text) => this.setState({password: text})}
         />
-        
+        <TouchableHighlight onPress={() => { alert("POST /sessions") }}>
+          <Text style={styles.button}>Sign In</Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={() => { alert("GET /users/new") }}>
+          <Text style={styles.button}>Sign Up</Text>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -46,5 +53,12 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 200,
+  },
+  button: {
+    backgroundColor: 'red',
+    marginTop: 10,
+    color: 'white',
+    fontWeight: 'bold',
+    padding: 3
   }
 });
