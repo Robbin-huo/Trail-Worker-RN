@@ -32,7 +32,8 @@ export default class Login extends Component {
           style={styles.input}
           onChangeText={(text) => this.setState({password: text})}
         />
-        <TouchableHighlight onPress={() => { alert("POST /sessions") }}>
+        <TouchableHighlight
+          onPress={() => { this.props.set_id(this.state.email, this.state.password) }}>
           <Text style={styles.button}>Sign In</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => { alert("GET /users/new") }}>
