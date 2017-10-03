@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { styles } from './styles/styles'
 import {
   Button,
-  StyleSheet,
   TextInput,
   Text,
   TouchableHighlight,
@@ -74,24 +74,3 @@ export default class Login extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  content: {
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  input: {
-    width: 200,
-    fontSize: 20
-  },
-  button: {
-    fontSize: 20,
-    backgroundColor: 'green',
-    marginTop: 10,
-    color: 'white',
-    fontWeight: 'bold',
-    padding: 3
-  }
-});
