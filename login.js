@@ -13,8 +13,37 @@ export default class Login extends Component {
     super(props);
     this.state = {
       email: null,
-      password: null
+      password: null,
+      error: null
     }
+  }
+
+  static navigationOptions = {
+    title: "Login"
+  };
+
+  handleSignin(email, pass) {
+    const { navigate } = this.props.navigation;
+    fetch('https://localhost/:9393/sessions', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        password: pass
+      })
+    }).then((response) => response.json())
+    .then((responseJson) => {
+      alert(resopnseJson);
+      // if responseJson.user.id != nil {
+      //   navigate('user', responseJson);
+      // }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
 
   render() {
@@ -33,7 +62,7 @@ export default class Login extends Component {
           onChangeText={(text) => this.setState({password: text})}
         />
         <TouchableHighlight
-          onPress={() => { this.props.set_id(this.state.email, this.state.password) }}>
+          onPress={() => { this.signIn(this.state.email, this.state.password) }}>
           <Text style={styles.button}>Sign In</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => { alert("GET /users/new") }}>
@@ -53,9 +82,11 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 200,
+    fontSize: 20
   },
   button: {
-    backgroundColor: 'red',
+    fontSize: 20,
+    backgroundColor: 'green',
     marginTop: 10,
     color: 'white',
     fontWeight: 'bold',
