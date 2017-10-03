@@ -11,10 +11,12 @@ import {
 export default class Login extends Component {
   constructor(props) {
     super(props);
+    const { navigate } = this.props.navigation;
     this.state = {
       email: null,
       password: null,
-      error: null
+      error: null,
+      navigate: navigate
     }
   }
 
@@ -23,7 +25,7 @@ export default class Login extends Component {
   };
 
   handleSignin(email, pass) {
-    const { navigate } = this.props.navigation;
+
     fetch('https://localhost/:9393/sessions', {
       method: 'POST',
       headers: {
@@ -38,7 +40,7 @@ export default class Login extends Component {
     .then((responseJson) => {
       alert(resopnseJson);
       // if responseJson.user.id != nil {
-      //   navigate('user', responseJson);
+      //   this.state.navigate('user', responseJson);
       // }
     })
     .catch((error) => {
@@ -65,7 +67,7 @@ export default class Login extends Component {
           onPress={() => { this.signIn(this.state.email, this.state.password) }}>
           <Text style={styles.button}>Sign In</Text>
         </TouchableHighlight>
-        <TouchableHighlight onPress={() => { alert("GET /users/new") }}>
+        <TouchableHighlight onPress={() => { this.state.navigate('SignUp') }}>
           <Text style={styles.button}>Sign Up</Text>
         </TouchableHighlight>
       </View>
