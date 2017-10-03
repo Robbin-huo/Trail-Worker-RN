@@ -5,8 +5,7 @@ import {
   TextInput,
   Text,
   TouchableHighlight,
-  View,
-  PermissionsAndroid,
+  View
 } from 'react-native';
 
 export default class Login extends Component {
