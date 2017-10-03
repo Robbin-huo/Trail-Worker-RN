@@ -4,11 +4,13 @@ import { ScrollView, StyleSheet, Text, TouchableHighlight, View } from 'react-na
 export default class User extends Component {
   constructor(props){
     super(props);
+    // const { params } = this.props.navigation.state;
+    // this.state = {
+    //   user: params.user
+    // }
     this.state = {
       user: {
-        username: "Hambone",
-        id: 43,
-        password: "wenis"
+        username: "Wenis",
       }
     }
   }
