@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { styles } from './styles/styles';
+import {
+  ScrollView,
+  Text,
+  TouchableHighlight,
+  View
+} from 'react-native';
 
 export default class User extends Component {
   constructor(props){
@@ -46,27 +52,3 @@ export default class User extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  titleText: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    textDecorationLine: 'underline'
-  },
-  content: {
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 5,
-    marginRight: 5
-  },
-  button: {
-    backgroundColor: 'red',
-    marginTop: 10,
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold',
-    padding: 3
-  }
-});
