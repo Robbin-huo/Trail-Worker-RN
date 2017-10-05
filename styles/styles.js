@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     color: 'white',
     fontWeight: 'bold',
-    padding: 3
+    padding: 3,
   },
   content: {
     flexDirection: 'column',
@@ -18,8 +18,21 @@ export const styles = StyleSheet.create({
     marginRight: 5
   },
   input: {
-    width: 200,
-    fontSize: 20
+    width: 300,
+    fontSize: 20,
+    backgroundColor: 'white'
+  },
+  lg_input: {
+    fontSize: 30,
+    flex: 1,
+    height: 150,
+    backgroundColor: 'white'
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 15
   },
   titleText: {
     fontSize: 40,
