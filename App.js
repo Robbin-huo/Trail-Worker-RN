@@ -8,10 +8,10 @@ import NewRequest from './lib/new_request.js';
 import Ra from './lib/react_autocomplete_test.js'
 
 export const App = StackNavigator({
+  Login: {screen: Login},
   Test: {screen: Ra},
   NewRequest: {screen: NewRequest},
   User: {screen: User},
-  Login: {screen: Login},
   SignUp: {screen: SignUp},
 })
 
