@@ -8,8 +8,8 @@ import NewRequest from './lib/new_request.js';
 import AllRequests from './lib/all_requests.js';
 
 export const App = StackNavigator({
-  AllRequests: {screen: AllRequests},
   Login: {screen: Login},
+  AllRequests: {screen: AllRequests},
   User: {screen: User},
   NewRequest: {screen: NewRequest},
   SignUp: {screen: SignUp},
