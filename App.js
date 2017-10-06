@@ -5,13 +5,13 @@ import Login from './lib/login.js';
 import User from './lib/user.js';
 import SignUp from './lib/sign_up.js'
 import NewRequest from './lib/new_request.js';
-import Ra from './lib/react_autocomplete_test.js'
+import AllRequests from './lib/all_requests.js';
 
 export const App = StackNavigator({
+  AllRequests: {screen: AllRequests},
   Login: {screen: Login},
   User: {screen: User},
   NewRequest: {screen: NewRequest},
-  Test: {screen: Ra},
   SignUp: {screen: SignUp},
 })
 
