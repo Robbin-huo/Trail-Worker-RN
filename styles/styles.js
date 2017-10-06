@@ -13,8 +13,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 1,
     alignItems: 'center',
-    marginLeft: 5,
-    marginRight: 5
+    marginLeft: 10,
+    marginRight: 10
   },
   input: {
     width: 300,
@@ -31,7 +31,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 15
+    marginTop: 15,
+    fontSize: 20
   },
   titleText: {
     fontSize: 40,
