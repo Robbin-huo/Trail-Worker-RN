@@ -40,6 +40,6 @@ export const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   subtitleText: {
-    fontSize: 35,
+    fontSize: 30,
   }
 });
