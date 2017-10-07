@@ -37,6 +37,9 @@ export const styles = StyleSheet.create({
   titleText: {
     fontSize: 40,
     fontWeight: 'bold',
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
   },
+  subtitleText: {
+    fontSize: 35,
+  }
 });
