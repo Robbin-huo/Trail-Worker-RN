@@ -6,10 +6,12 @@ import User from './lib/user.js';
 import SignUp from './lib/sign_up.js'
 import NewRequest from './lib/new_request.js';
 import AllRequests from './lib/all_requests.js';
+import ShowRequest from './lib/show_request.js';
 
 export const App = StackNavigator({
   Login: {screen: Login},
   AllRequests: {screen: AllRequests},
+  ShowRequest: {screen: ShowRequest},
   User: {screen: User},
   NewRequest: {screen: NewRequest},
   SignUp: {screen: SignUp},
