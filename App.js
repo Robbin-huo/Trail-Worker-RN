@@ -9,8 +9,8 @@ import AllRequests from './lib/all_requests.js';
 import ShowRequest from './lib/show_request.js';
 
 export const App = StackNavigator({
-  AllRequests: {screen: AllRequests},
   Login: {screen: Login},
+  AllRequests: {screen: AllRequests},
   ShowRequest: {screen: ShowRequest},
   User: {screen: User},
   NewRequest: {screen: NewRequest},
